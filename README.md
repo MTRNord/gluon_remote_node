@@ -58,9 +58,9 @@ Test's not implemented yet
 * ssh-keygen - Genearating SSH-keys if needed
 * sshclient - Libary for connecting Router over SSH
 
-//## Contributing
+[//]: # ## Contributing
 
-//Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+[//]: # Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
