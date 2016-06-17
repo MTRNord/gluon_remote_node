@@ -1,7 +1,7 @@
 var sshclient = require('sshclient');
-
-export.modules[
-  changeName: function (ip, key, newname) {
+var laeh = require('laeh2').leanStacks(true);
+var _x = laeh._x;
+var changeName = function (ip, key, newname, token, cb) {
     var opts = {
 
       host: ip,
@@ -19,9 +19,9 @@ export.modules[
         sshclient.exec('uci commit system', cb);
         sshclient.exec('/etc/init.d/system reload', cb);
       })
-    });
-  },
-  changeContact: function (ip, key, name, email) {
+    }));
+  }
+var changeContact = function (ip, key, name, email, token, cb) {
     var opts = {
 
       host: ip,
@@ -39,9 +39,9 @@ export.modules[
         sshclient.exec('uci set gluon-node-info.@owner[0].contact="' + name + ' <' + email + '>', cb);
         sshclient.exec('uci commit gluon-node-info', cb);
       })
-    });
-  },
-  activateMOL: function (ip, key) {
+    }));
+  }
+var activateMOL = function (ip, key, cb) {
     var opts = {
 
       host: ip,
@@ -60,9 +60,9 @@ export.modules[
         sshclient.exec('uci commit network', cb);
         sshclient.exec('/etc/init.d/network restart', cb);
       })
-    });
-  },
-  deactivateMOL: function (ip, key) {
+    }));
+  }
+var deactivateMOL = function (ip, key, cb) {
     var opts = {
 
       host: ip,
@@ -81,9 +81,9 @@ export.modules[
         sshclient.exec('uci commit network', cb);
         sshclient.exec('/etc/init.d/network restart', cb);
       })
-    });
-  },
-  activateMOW: function (ip, key) {
+    }));
+  }
+var activateMOW = function (ip, key, cb) {
     var opts = {
 
       host: ip,
@@ -101,9 +101,9 @@ export.modules[
         sshclient.exec('uci commit network', cb);
         sshclient.exec('/etc/init.d/network restart', cb);
       })
-    });
-  },
-  deactivateMOW: function (ip, key) {
+    }));
+  }
+var deactivateMOW = function (ip, key, cb) {
     var opts = {
 
       host: ip,
@@ -121,10 +121,10 @@ export.modules[
         sshclient.exec('uci commit network', cb);
         sshclient.exec('/etc/init.d/network restart', cb);
       })
-    });
-  },
-  changeGeo: function (ip, key, lat, long, alt, token) {
-    if (ccode === "ffnord" || ccode === "ffhh" || ccode === "ffhl" ||) {
+    }));
+  }
+var changeGeo = function (ip, key, lat, long, alt, token, cb) {
+    if (ccode === "ffnord" || ccode === "ffhh" || ccode === "ffhl") {
       //TODÒ Add formAPI
     } else {
       var opts = {
@@ -146,8 +146,15 @@ export.modules[
           sshclient.exec('uci set gluon-node-info.@location[0].share_location=1', cb);
           sshclient.exec('uci commit gluon-node-info', cb);
         })
-      });
+      }));
     }
 
   }
-]
+
+exports.changeName = changeName;
+exports.changeContact = changeContact;
+exports.activateMOL = activateMOL;
+exports.deactivateMOL = deactivateMOL;
+exports.activateMOW = activateMOW;
+exports.deactivateMOW = deactivateMOW;
+exports.changeGeo = changeGeo;

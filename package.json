@@ -2,10 +2,10 @@
   "name": "gluon-web-remote",
   "version": "1.0.0",
   "description": "A Web Config mode for running mode of Gluon Router",
-  "main": "server.js",
+  "main": "gluon_web_remote.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node gluon_web_remote.js"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
     "ejs": "^2.4.2",
     "express": "^4.13.4",
     "helmet": "^2.1.1",
+    "laeh2": "^0.3.3",
     "ssh-keygen": "^0.2.1",
     "sshclient": "0.0.4"
   },
