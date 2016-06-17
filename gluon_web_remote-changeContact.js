@@ -1,5 +1,7 @@
 var program = require('commander');
 var backend = require("./backend/commands.js");
+var chalk_lib = require('chalk');
+var chalk = new chalk_lib.constructor({enabled: true});
 
 program
   .parse(process.argv);
@@ -9,7 +11,7 @@ var args = program.args;
 console.log();
 
 if (args.length < 4) {
-  console.error('Please set all required Arguments');
+  console.error(chalk.bold.red('Please set all required Arguments'));
   process.exit(1);
 }
 if (args.length === 4) {
@@ -18,7 +20,7 @@ if (args.length === 4) {
   var name = args[3]
   var email = args[4]
   backend.changeContact(ip, key, name, email, "")
-  console.log("Contact changed successfully!");
+  console.log(chalk.green("Contact changed successfully!"));
 }
 if (args.length === 5) {
   var ip = args[1]
@@ -27,6 +29,6 @@ if (args.length === 5) {
   var name = args[4]
   var email = args[5]
   backend.changeContact(ip, key, name, email, token)
-  console.log("Contact changed successfully!");
+  console.log(chalk.green("Contact changed successfully!"));
 }
 console.log();
