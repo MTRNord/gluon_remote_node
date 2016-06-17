@@ -124,6 +124,7 @@ var deactivateMOW = function (ip, key, cb) {
     }));
   }
 var changeGeo = function (ip, key, lat, long, alt, token, cb) {
+    var ccode = "placeholder"
     if (ccode === "ffnord" || ccode === "ffhh" || ccode === "ffhl") {
       //TODÒ Add formAPI
     } else {

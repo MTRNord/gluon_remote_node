@@ -18,8 +18,10 @@ if (args.length === 3) {
   var switchPosition = args[3]
   if (switchPosition === "on") {
     backend.activateMOW(ip, key)
+    console.log("Mesh on Wan activated successfully!");
   }else if (switchPosition === "off") {
     backend.deactivateMOW(ip, key)
+    console.log("Mesh on Wan deactivated successfully!");
   }
 }
 

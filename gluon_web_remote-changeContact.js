@@ -18,6 +18,7 @@ if (args.length === 4) {
   var name = args[3]
   var email = args[4]
   backend.changeContact(ip, key, name, email, "")
+  console.log("Contact changed successfully!");
 }
 if (args.length === 5) {
   var ip = args[1]
@@ -26,5 +27,6 @@ if (args.length === 5) {
   var name = args[4]
   var email = args[5]
   backend.changeContact(ip, key, name, email, token)
+  console.log("Contact changed successfully!");
 }
 console.log();

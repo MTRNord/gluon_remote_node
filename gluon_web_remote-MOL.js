@@ -18,8 +18,10 @@ if (args.length === 3) {
   var switchPosition = args[3]
   if (switchPosition === "on") {
     backend.activateMOL(ip, key)
+    console.log("Mesh on Lan activated successfully!");
   }else if (switchPosition === "off") {
     backend.deactivateMOL(ip, key)
+    console.log("Mesh on Lan deactivated successfully!");
   }
 }
 
