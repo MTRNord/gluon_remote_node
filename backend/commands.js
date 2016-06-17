@@ -40,7 +40,7 @@ export.modules[
         sshclient.exec('uci commit gluon-node-info', cb);
       })
     });
-  }.
+  },
   activateMOL: function (ip, key) {
     var opts = {
 
@@ -61,7 +61,7 @@ export.modules[
         sshclient.exec('/etc/init.d/network restart', cb);
       })
     });
-  }.
+  },
   deactivateMOL: function (ip, key) {
     var opts = {
 
@@ -82,7 +82,7 @@ export.modules[
         sshclient.exec('/etc/init.d/network restart', cb);
       })
     });
-  }.
+  },
   activateMOW: function (ip, key) {
     var opts = {
 
@@ -102,7 +102,7 @@ export.modules[
         sshclient.exec('/etc/init.d/network restart', cb);
       })
     });
-  }.
+  },
   deactivateMOW: function (ip, key) {
     var opts = {
 
@@ -122,5 +122,32 @@ export.modules[
         sshclient.exec('/etc/init.d/network restart', cb);
       })
     });
+  },
+  changeGeo: function (ip, key, lat, long, alt, token) {
+    if (ccode === "ffnord" || ccode === "ffhh" || ccode === "ffhl" ||) {
+      //TODÒ Add formAPI
+    } else {
+      var opts = {
+
+        host: ip,
+        port: 22,
+        username: 'root',
+        privateKey: key,
+
+        debug: true, // optional
+        console: console // optional, allows logger overriding
+      };
+
+      sshclient.session(opts, _x(cb, true, function(err, ses) {
+        _x(null, false, function(cb) {
+          sshclient.exec('uci set gluon-node-info.@location[0].latitude=' + lat, cb);
+          sshclient.exec('uci set gluon-node-info.@location[0].longitude=' + long, cb);
+          sshclient.exec('uci set gluon-node-info.@location[0].altitude=' + alt, cb);
+          sshclient.exec('uci set gluon-node-info.@location[0].share_location=1', cb);
+          sshclient.exec('uci commit gluon-node-info', cb);
+        })
+      });
+    }
+
   }
 ]

@@ -4,6 +4,9 @@
     "communityName": {
       "type": "string"
     },
+    "ccode": {
+      "type": "string"
+    },
     "nodesJson": {
       "type": "string",
       "format": "uri"
