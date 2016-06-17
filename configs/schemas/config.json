@@ -1,0 +1,12 @@
+{
+  "$async": true,
+  "properties": {
+    "communityName": {
+      "type": "string"
+    },
+    "nodesJson": {
+      "type": "string",
+      "format": "uri"
+    }
+  }
+}
