@@ -1,7 +1,7 @@
 {
-  "name": "gluon-web-remote",
+  "name": "gluon-remote",
   "version": "1.0.0",
-  "description": "A Web Config mode for running mode of Gluon Router",
+  "description": "A Remote Config mode for running mode of Gluon Router",
   "main": "gluon_web_remote.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

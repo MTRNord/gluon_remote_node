@@ -1,4 +1,4 @@
-# Gluon Web Remote
+# Gluon Remote
 
 An Tool to easily manage Freifunk Gluon Routers. (WIP)
 
