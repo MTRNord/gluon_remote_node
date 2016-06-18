@@ -33,6 +33,7 @@
     "express": "^4.13.4",
     "helmet": "^2.1.1",
     "laeh2": "^0.3.3",
+    "regex": "^0.1.1",
     "ssh-keygen": "^0.2.1",
     "sshclient": "0.0.4"
   },
