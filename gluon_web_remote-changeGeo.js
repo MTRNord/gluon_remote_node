@@ -74,9 +74,8 @@ if (args.length === 7) {
         process.exit(1);
       }
     }else {
-      console.error(chalk.bold.red(key));
-      // console.error(chalk.bold.red('Please set correct SSH Key'));
-      // process.exit(1);
+      console.error(chalk.bold.red('Please set correct SSH Key'));
+      process.exit(1);
     }
   }else {
     console.error(chalk.bold.red('Please set correct IPv6 or Hostname'));
