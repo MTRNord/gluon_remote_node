@@ -7,10 +7,10 @@ var backend = require("./backend/commands.js");
 
 program
   .command('changeName <ip> <ssh> [token] <newname>', 'Change the Hostname of the router (no Formular support yet!)')
-  .command('changeContact <ip> <ssh> [token] <name> <email>', 'Change the Contact of the router (no Formular support yet!)')
+  .command('changeContact <ip> <ssh> [token] [ccode] <name> <email>', 'Change the Contact of the router (no Formular support yet!)')
+  .command('changeGeo <ip> <ssh> [token] [ccode] <lat> <long> <altitude>', 'Change the Router Position (no Formular support yet!)')
   .command('MOL <ip> <ssh> <on/off>', 'Activate or deactivate Mesh on Lan')
   .command('MOW <ip> <ssh> <on/off>', 'Activate or deactivate Mesh on Wan')
-  .command('changeGeo <ip> <ssh> [token] <lat> <long> <altitude>', 'Change the Router Position (no Formular support yet!)')
   .parse(process.argv);
 
 

@@ -1,4 +1,5 @@
 var sshclient = require('sshclient');
+var request = require('request');
 var laeh = require('laeh2').leanStacks(true);
 var _x = laeh._x;
 var changeName = function (ip, key, newname, token, cb) {
@@ -123,10 +124,19 @@ var deactivateMOW = function (ip, key, cb) {
       })
     }));
   }
-var changeGeo = function (ip, key, lat, long, alt, token, cb) {
-    var ccode = "placeholder"
-    if (ccode === "ffnord" || ccode === "ffhh" || ccode === "ffhl") {
-      //TODÒ Add formAPI
+var changeGeo = function (ip, key, lat, long, alt, token, ccode, cb) {
+    if (ccode === "ffnord" || ccode === "ffhh") {
+      request.get('https://formular.nord.freifunk.net/api/node/' + token, function (error, response, body) {
+        if (!error && response.statusCode == 200) {
+          var form_data_old = body
+          console.log(body[1])
+          request.post('https://formular.nord.freifunk.net/api/node/' + token, function (error, response, body) {
+            if (!error && response.statusCode == 200) {
+              console.log(body) // Show the HTML for the Google homepage.
+            }
+          })
+        }
+      })
     } else {
       var opts = {
 
