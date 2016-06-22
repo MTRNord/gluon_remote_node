@@ -1,6 +1,7 @@
 # Gluon Remote
 
 An Tool to easily manage Freifunk Gluon Routers. (WIP)
+Discussion Thread: https://forum.freifunk.net/t/gluon-remote-tool/
 
 ## Getting Started
 
@@ -31,15 +32,16 @@ Commandline:
 ```
 Usage: npm start [options] [command]
 
+SSH Key has to be an private one. It is used to connect to the Router which means that you have to have an private key for the Tool and the public one must be registered in the Router
 
 Commands:
 
-  changeName <ip> <ssh> [token] <newname>               Change the Hostname of the router (no Formular support yet!)
-  changeContact <ip> <ssh> [token] <name> <email>       Change the Contact of the router (no Formular support yet!)
-  MOL <ip> <ssh> <on/off>                               Activate or deactivate Mesh on Lan
-  MOW <ip> <ssh> <on/off>                               Activate or deactivate Mesh on Wan
-  changeGeo <ip> <ssh> [token] <lat> <long> <altitude>  Change the Router Position (no Formular support yet!)
-  help [cmd]                                            display help for [cmd]
+  changeName <ip> <ssh> [token] <newname>                       Change the Hostname of the router (no Formular support yet!)
+  changeContact <ip> <ssh> [token] [ccode] <name> <email>       Change the Contact of the router (no Formular support yet!)
+  changeGeo <ip> <ssh> [token] [ccode] <lat> <long> <altitude>  Change the Router Position (no Formular support yet!)
+  MOL <ip> <ssh> <on/off>                                       Activate or deactivate Mesh on Lan
+  MOW <ip> <ssh> <on/off>                                       Activate or deactivate Mesh on Wan
+  help [cmd]                                                    display help for [cmd]
 
 Options:
 
