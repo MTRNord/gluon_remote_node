@@ -5,7 +5,9 @@
   "main": "gluon_web_remote.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node gluon_web_remote.js"
+    "start": "node gluon_web_remote.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -36,10 +38,12 @@
     "laeh2": "^0.3.3",
     "request": "^2.72.0",
     "ssh-keygen": "^0.2.1",
-    "sshclient": "0.0.4"
+    "sshclient": "0.0.4",
+    "snyk": "^1.19.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^2.5.3"
-  }
+  },
+  "snyk": true
 }
