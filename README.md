@@ -1,5 +1,7 @@
 # Gluon Remote
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/MTRNord/gluon_remote_node.svg)](https://greenkeeper.io/)
+
 An Tool to easily manage Freifunk Gluon Routers. (WIP)
 
 Discussion Thread: https://forum.freifunk.net/t/gluon-remote-tool/
