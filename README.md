@@ -1,6 +1,6 @@
 # Gluon Remote
 
-An Tool to easily manage Freifunk Gluon Routers. (WIP)
+A tool to easily manage Freifunk Gluon Routers. (WIP)
 
 Discussion Thread: https://forum.freifunk.net/t/gluon-remote-tool/
 
@@ -33,7 +33,7 @@ Commandline:
 ```
 Usage: npm start [options] [command]
 
-SSH Key has to be an private one. It is used to connect to the Router which means that you have to have an private key for the Tool and the public one must be registered in the Router
+SSH Key has to be a private one. It is used to connect to the Router which means that you have to have a private key for the Tool and the public one must be registered in the Router
 
 Commands:
 
@@ -67,7 +67,7 @@ Test's not implemented yet
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/MTRNord/gluon_remote_node/tags).
 
 ## Authors
 
